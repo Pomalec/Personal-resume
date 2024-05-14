@@ -1,0 +1,278 @@
+/*
+color palette
+Biloba Flower
+#D7A3EB
+
+Baltic Sea
+#1A191E
+
+Manatee
+#9391A2
+
+Trendy Pink
+#846A98
+*/
+/*
+GLOBAL STYLES
+
+
+*/
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing:initial;
+  }
+  html,body{
+    height:100%;
+  }
+body {
+    background-color: #D7A3EB;
+    margin:0;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.69rem;
+    line-height: 1.4;
+}
+h1,h2,h3{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400px;
+    margin: 0;
+}
+h1{
+    font-size: 7rem;
+    line-height: 0.9;
+}
+h2 {
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 1.6rem;
+    
+}
+/*
+links
+*/
+a{
+    color:#846A98 ;
+}
+a:hover{
+    color:#D7A3EB ;
+}
+footer a{
+    color:#D7A3EB ;
+    
+
+}
+footer a:hover{
+
+    color:#846A98 ;
+}
+.btn{
+    background:#846A98 ;
+    color: #D7A3EB;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: 0.5em;
+    line-height: 1;
+    border-radius: 40px;
+}
+.btn:hover{
+    color: #9391A2;
+}
+
+.contentwrapper{
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+/*
+HOME
+------------------------------------------------
+*/
+.home{
+    background: url(../images/bg-home-office-studio.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.home .contentwrapper{
+
+flex: 1 0 auto;
+}
+.content-bg{
+   background: rgb(255 255 255/0.9); 
+   padding: 30px;
+}
+@media screen and (max-width:650px) {
+    .home .contentwrapper{
+
+        padding: 10px;
+        }
+        .content-bg{
+           
+           padding: 20px;
+        }
+}
+/*
+RESUME
+----------------------
+*/
+.resume header::before{
+    background: url(../images/bg-home-office-studio.jpg) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 369px;
+    
+}
+.resum-sec{
+    margin-bottom: 50px;
+}
+.resum-sec h2{
+border-bottom: 2px dashed #846A98;
+}
+.download-link{
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    font-size: 1.5rem;
+}
+@media screen and (max-width:1200px) {
+    .download-link{
+        position: absolute;
+       
+    }
+}
+@media screen and (max-width:500px) {
+    .resume header::before{
+        height: 200px;
+    }
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .home{
+        
+        background-size:contain ;
+        background-position: center;
+    }
+}
+/*
+PROFILE
+
+*/
+.project-item{
+   
+    margin: 30px 0;
+}
+
+.project-item img{
+    width: 345px;
+    float: left;
+    margin-right: 46px;
+    margin-bottom: 60px;
+}
+@media screen and (min-width:860px) {
+    .project-item{
+        display: flow-root;
+        
+    }
+    .project-item img{
+       
+        float: left;
+        margin-right: 46px;
+        
+    }
+}
+@media screen and (min-width:650px) and  (max-width:859px) {
+    .projectw{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 20px;
+        
+    }
+    .project-item img{
+       
+       width: 100%;
+        
+    }
+}
+@media screen and (max-width:500px) {
+    .project-item img{
+       
+        width: 100%;
+         margin-bottom: 10px;
+     }
+} 
+    
+
+/*
+EDUCATION
+
+*/
+.edu-res{
+margin-top: 20px;
+}
+/*
+WORK
+
+*/
+.work-item{
+    display: flex;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+}
+.work-sum {
+margin-top: 32px;
+}
+
+/*
+FOOTER
+--------------------------------------
+*/
+footer{
+    background: #1A191E;
+    color: #9391A2;
+    position: relative;
+    bottom: 0%;
+    
+}
+.socials{
+    list-style-type: none;
+    padding: 0;
+}
+.socials li{
+display: inline-block;
+margin-left: 10px;
+}
+.socials img{
+    width: 32px;
+
+}
+.socials img:hover{
+    opacity: 50%;
+}
+@media screen and (min-width:860px) {
+    footer{
+        
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width:859px) {
+    footer{
+        
+       text-align: center;
+       padding: 10px;
+    }
+}
